@@ -7,6 +7,7 @@
   <imports />
   <registry>
     <language id="a53c4e1e-842a-41bf-8061-e6593f83a038" name="Intervals">
+      <concept id="4622845597498558983" name="Intervals.structure.LeftOpenInterval" flags="ng" index="2UhIYk" />
       <concept id="4622845597498534121" name="Intervals.structure.ClosedInterval" flags="ng" index="2UhOPU" />
       <concept id="4622845597498505140" name="Intervals.structure.OpenInterval" flags="ng" index="2UhX8B" />
       <concept id="4622845597498171906" name="Intervals.structure.Factorization" flags="ng" index="2Uvcuh">
@@ -34,6 +35,11 @@
     <property role="TrG5h" value="wild west" />
     <node concept="2Uvf2U" id="40BDpfUmX9i" role="2Uvcug">
       <property role="TrG5h" value="the good" />
+      <node concept="2UhIYk" id="6qFTb8TAFI$" role="2Uvf2Z">
+        <property role="1v8aQs" value="true" />
+        <property role="1v8aQo" value="-1" />
+        <property role="1v8aQv" value="0" />
+      </node>
       <node concept="2UhOPU" id="6qFTb8T$yjc" role="2Uvf2Z">
         <property role="1v8aQp" value="true" />
         <property role="1v8aQs" value="true" />

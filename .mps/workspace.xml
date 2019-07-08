@@ -6,7 +6,9 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c16d701-7ed7-4cee-bc9c-d324b8f6a919" name="Default Changelist" comment="Refactor Interval to be interface">
+    <list default="true" id="3c16d701-7ed7-4cee-bc9c-d324b8f6a919" name="Default Changelist" comment="Introduce IntervalClass can be factorization child constraint">
+      <change beforePath="$PROJECT_DIR$/languages/Intervals/classes_gen/Intervals/constraints/ConstraintsAspectDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/Intervals/classes_gen/Intervals/constraints/ConstraintsAspectDescriptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/Intervals/classes_gen/Intervals/constraints/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/Intervals/classes_gen/Intervals/constraints/aspectcps-descriptorclasses.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/Intervals/classes_gen/Intervals/constraints/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/Intervals/classes_gen/Intervals/constraints/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/Intervals/models/Intervals.constraints.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/Intervals/models/Intervals.constraints.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/Intervals/sandbox/models/Intervals.sandbox.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/Intervals/sandbox/models/Intervals.sandbox.mps" afterDir="false" />
@@ -86,11 +88,11 @@
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="51" />
-                    <property name="caretXRelative" value="0" />
+                    <property name="caretX" value="128" />
+                    <property name="caretXRelative" value="9" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_8jcej1_a0">
-                      <node node_reference="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" />
+                    <cellInfo cellId="Constant_tkoce_e0">
+                      <node node_reference="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007681023" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -99,7 +101,7 @@
                 <foldable />
                 <restoreAlways />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007681023" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -112,136 +114,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="mps://node://Intervals/Intervals.structure/ClosedInterval">
+        <entry file="mps://node://Intervals/Intervals.structure/Factorization">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
               <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="293" />
-                    <property name="caretXRelative" value="126" />
-                    <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_name">
-                      <node node_reference="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/4622845597498534518" />
-                    </cellInfo>
-                  </stackElement>
-                </selectionStack>
-                <errorMarkers />
-                <transactionalProperties />
-                <foldable>
-                  <collapsedElement isCollapsed="false">
-                    <cellIdElement cellId="Collection_6lfqqa_b0">
-                      <node node_reference="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/4622845597498534519" />
-                    </cellIdElement>
-                  </collapsedElement>
-                </foldable>
-                <restoreAlways />
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorMarkers />
-                <transactionalProperties />
-                <foldable />
-                <restoreAlways />
-                <enabledHints />
-              </inspectorMemento>
-              <node node_ref="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/4622845597498534518" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="mps://node://Intervals/Intervals.structure/IntervalClass">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-              <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-                <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="559" />
-                    <property name="caretXRelative" value="45" />
-                    <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_value">
-                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007606127" />
-                    </cellInfo>
-                  </stackElement>
-                </selectionStack>
-                <errorMarkers />
-                <transactionalProperties />
-                <foldable>
-                  <collapsedElement isCollapsed="false">
-                    <cellIdElement cellId="Collection_trik0f_b0">
-                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007448271" />
-                    </cellIdElement>
-                  </collapsedElement>
-                </foldable>
-                <restoreAlways>
-                  <collapsedElement isCollapsed="false">
-                    <cellIdElement cellId="Collection_trik0f_b0">
-                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007448271" />
-                    </cellIdElement>
-                  </collapsedElement>
-                </restoreAlways>
-              </memento>
-              <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorMarkers />
-                <transactionalProperties />
-                <foldable />
-                <restoreAlways />
-                <enabledHints />
-              </inspectorMemento>
-              <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007448270" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="mps://node://Intervals/Intervals.structure/Interval">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-              <memento saveSessionState="false" viewPositionX="0" viewPositionY="128">
-                <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="33" />
+                    <property name="caretX" value="158" />
                     <property name="caretXRelative" value="0" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_vrfi3w_a0">
-                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007038867" />
+                    <cellInfo cellId="empty_defaultScope">
+                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007852098" />
                     </cellInfo>
-                  </stackElement>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.NodeRangeSelection">
-                    <property name="role" value="property" />
-                    <property name="modelId" value="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)" />
-                    <property name="firstNodeId" value="7398258267007038867" />
-                    <property name="parentNodeId" value="7398258267006912923" />
-                    <property name="lastNodeId" value="7398258267007038867" />
                   </stackElement>
                 </selectionStack>
                 <errorMarkers />
                 <transactionalProperties />
-                <foldable>
-                  <collapsedElement isCollapsed="false">
-                    <cellIdElement cellId="Collection_trik0f_b0">
-                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007038924" />
-                    </cellIdElement>
-                  </collapsedElement>
-                  <collapsedElement isCollapsed="false">
-                    <cellIdElement cellId="Collection_trik0f_b0">
-                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267006912926" />
-                    </cellIdElement>
-                  </collapsedElement>
-                  <collapsedElement isCollapsed="false">
-                    <cellIdElement cellId="Collection_trik0f_b0">
-                      <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007123987" />
-                    </cellIdElement>
-                  </collapsedElement>
-                </foldable>
+                <foldable />
                 <restoreAlways />
               </memento>
-              <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+              <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007681023" saveSessionState="false" viewPositionX="0" viewPositionY="0">
                 <selectionStack />
                 <errorMarkers />
                 <transactionalProperties />
@@ -249,7 +142,7 @@
                 <restoreAlways />
                 <enabledHints />
               </inspectorMemento>
-              <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267006912923" />
+              <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007852098" />
             </state>
           </provider>
         </entry>
@@ -370,21 +263,15 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="a53c4e1e-842a-41bf-8061-e6593f83a038(Intervals)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
+              <option name="myItemId" value="ee0dd857-da10-40e9-a12c-9ee939578171" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="a53c4e1e-842a-41bf-8061-e6593f83a038(Intervals)" />
+              <option name="myItemId" value="Intervals" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor) in IdeaFile[file://C:/Users/aafanasyev.PARSEQ/MPSProjects/intervals-language/languages/Intervals/models/Intervals.editor.mps]" />
+              <option name="myItemId" value="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox) in IdeaFile[file://C:/Users/aafanasyev.PARSEQ/MPSProjects/intervals-language/languages/Intervals/sandbox/models/Intervals.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,6 +295,44 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ee0dd857-da10-40e9-a12c-9ee939578171" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Intervals" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a53c4e1e-842a-41bf-8061-e6593f83a038(Intervals)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor) in IdeaFile[file://C:/Users/aafanasyev.PARSEQ/MPSProjects/intervals-language/languages/Intervals/models/Intervals.editor.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ee0dd857-da10-40e9-a12c-9ee939578171" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="a53c4e1e-842a-41bf-8061-e6593f83a038(Intervals)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -419,32 +344,6 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ee0dd857-da10-40e9-a12c-9ee939578171" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Intervals" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ee0dd857-da10-40e9-a12c-9ee939578171" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Intervals" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox) in IdeaFile[file://C:/Users/aafanasyev.PARSEQ/MPSProjects/intervals-language/languages/Intervals/sandbox/models/Intervals.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,8 +366,12 @@
               <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a53c4e1e-842a-41bf-8061-e6593f83a038(Intervals)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
-          <PATH>
+          <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
@@ -477,10 +380,16 @@
               <option name="myItemId" value="ee0dd857-da10-40e9-a12c-9ee939578171" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <SELECTED>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
+              <option name="myItemId" value="Intervals" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox) in IdeaFile[file://C:/Users/aafanasyev.PARSEQ/MPSProjects/intervals-language/languages/Intervals/sandbox/models/Intervals.sandbox.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4622845597498200657" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
@@ -535,10 +444,10 @@
       <window_info anchor="bottom" id="Version Control" order="17" />
       <window_info anchor="bottom" id="Generation Tracer" order="18" />
       <window_info anchor="bottom" id="Cell Explorer" order="19" />
-      <window_info anchor="bottom" id="Messages" order="20" sideWeight="0.49838883" visible="true" weight="0.32831" />
+      <window_info anchor="bottom" id="Messages" order="20" sideWeight="0.49785176" visible="true" weight="0.32831" />
       <window_info anchor="bottom" id="Console" order="21" weight="0.32985073" />
       <window_info anchor="bottom" id="RefactoringView" order="22" sideWeight="0.4989259" weight="0.32938644" />
-      <window_info anchor="bottom" id="Inspector" order="23" sideWeight="0.5016112" side_tool="true" visible="true" weight="0.32831" />
+      <window_info anchor="bottom" id="Inspector" order="23" sideWeight="0.5021482" side_tool="true" visible="true" weight="0.32831" />
       <window_info anchor="bottom" id="Dependencies Viewer" order="24" />
       <window_info anchor="bottom" id="Services" order="25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -605,6 +514,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Introduce IntervalClass can be factorization child constraint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce IntervalClass can be factorization child constraint" />
   </component>
   <component name="editorHistoryManager">
     <entry file="mps://node://Intervals/Intervals.structure/&lt;no name&gt;[PrimitiveDataTypeDeclaration]" />
@@ -1342,102 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://Intervals/Intervals.structure/Factorization">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="391" />
-                <property name="caretXRelative" value="117" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name">
-                  <node node_reference="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498192341" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/2062516511483007388" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498192341" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://Intervals/Intervals.structure/LeftOpenInterval">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="341" />
-                <property name="caretXRelative" value="90" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name">
-                  <node node_reference="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498559017" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362258" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498558984" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://Intervals/Intervals.structure/LeftOpenRightUnboundedInterval">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="192" />
-                <property name="caretXRelative" value="81" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name">
-                  <node node_reference="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/7398258267006405190" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006912809" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/7398258267006405175" />
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://Intervals/Intervals.structure/LeftUnboundedRightClosedInterval">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
@@ -1531,38 +1348,6 @@
             <enabledHints />
           </inspectorMemento>
           <node node_ref="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498511453" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://Intervals/Intervals.structure/RightOpenInterval">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="341" />
-                <property name="caretXRelative" value="90" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name">
-                  <node node_reference="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498561388" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006912809" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498561355" />
         </state>
       </provider>
     </entry>
@@ -1833,38 +1618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://Intervals/Intervals.structure/LeftClosedRightUnboundedInterval">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="78" />
-                <property name="caretXRelative" value="63" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_ueqr71_c0a">
-                  <node node_reference="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006405143" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006912809" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006405143" />
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://Intervals/Intervals.constraints/???_Constraints">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState" editorFocused="true">
@@ -1910,94 +1663,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://Intervals/Intervals.structure/IInterval">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
-          <memento saveSessionState="false" viewPositionX="0" viewPositionY="128">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="33" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_vrfi3w_a0">
-                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007038867" />
-                </cellInfo>
-              </stackElement>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.NodeRangeSelection">
-                <property name="role" value="property" />
-                <property name="modelId" value="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)" />
-                <property name="firstNodeId" value="7398258267007038867" />
-                <property name="parentNodeId" value="7398258267006912923" />
-                <property name="lastNodeId" value="7398258267007038867" />
-              </stackElement>
-            </selectionStack>
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable>
-              <collapsedElement isCollapsed="false">
-                <cellIdElement cellId="Collection_trik0f_b0">
-                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007038924" />
-                </cellIdElement>
-              </collapsedElement>
-              <collapsedElement isCollapsed="false">
-                <cellIdElement cellId="Collection_trik0f_b0">
-                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267006912926" />
-                </cellIdElement>
-              </collapsedElement>
-              <collapsedElement isCollapsed="false">
-                <cellIdElement cellId="Collection_trik0f_b0">
-                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007123987" />
-                </cellIdElement>
-              </collapsedElement>
-            </foldable>
-            <restoreAlways />
-          </memento>
-          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorMarkers />
-            <transactionalProperties />
-            <foldable />
-            <restoreAlways />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267006912923" />
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://Intervals/Intervals.structure/IntervalClass">
       <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState" editorFocused="true">
           <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="559" />
-                <property name="caretXRelative" value="45" />
+                <property name="caretX" value="391" />
+                <property name="caretXRelative" value="117" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_value">
-                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007606127" />
+                <cellInfo cellId="property_name">
+                  <node node_reference="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498175310" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
             <errorMarkers />
             <transactionalProperties />
-            <foldable>
-              <collapsedElement isCollapsed="false">
-                <cellIdElement cellId="Collection_trik0f_b0">
-                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007448271" />
-                </cellIdElement>
-              </collapsedElement>
-            </foldable>
-            <restoreAlways>
-              <collapsedElement isCollapsed="false">
-                <cellIdElement cellId="Collection_trik0f_b0">
-                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007448271" />
-                </cellIdElement>
-              </collapsedElement>
-            </restoreAlways>
+            <foldable />
+            <restoreAlways />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498175310" saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorMarkers />
             <transactionalProperties />
@@ -2005,7 +1691,7 @@
             <restoreAlways />
             <enabledHints />
           </inspectorMemento>
-          <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007448270" />
+          <node node_ref="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/4622845597498175310" />
         </state>
       </provider>
     </entry>
@@ -2035,7 +1721,7 @@
             </foldable>
             <restoreAlways />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/4622845597498534518" saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorMarkers />
             <transactionalProperties />
@@ -2047,18 +1733,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://Intervals.sandbox/Intervals.sandbox/wild west">
+    <entry file="mps://node://Intervals/Intervals.structure/LeftClosedRightUnboundedInterval">
       <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState" editorFocused="true">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
           <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="51" />
-                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="138" />
+                <property name="caretXRelative" value="27" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_8jcej1_a0">
-                  <node node_reference="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" />
+                <cellInfo cellId="property_name">
+                  <node node_reference="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/7398258267006405246" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
@@ -2067,7 +1753,244 @@
             <foldable />
             <restoreAlways />
           </memento>
-          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007362252" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+          <inspectorMemento currentlyEditedNode="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/7398258267006405246" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:11816f23-86b9-4ff6-bfc9-bbd7716158b6(Intervals.editor)/7398258267006405231" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://Intervals/Intervals.structure/LeftOpenRightUnboundedInterval">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="498" />
+                <property name="caretXRelative" value="36" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name">
+                  <node node_reference="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006938080" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006938080" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006405145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://Intervals/Intervals.structure/IInterval">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState" editorFocused="true">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="328" />
+                <property name="caretXRelative" value="72" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name">
+                  <node node_reference="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/7398258267006919331" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_fao2ea_a">
+                  <node node_reference="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/7398258267006919698" />
+                </cellIdElement>
+              </collapsedElement>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_6lfqqa_b0">
+                  <node node_reference="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/7398258267006919332" />
+                </cellIdElement>
+              </collapsedElement>
+            </foldable>
+            <restoreAlways />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/7398258267006919331" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:553ac58b-a310-4c78-96de-7034789fa987(Intervals.behavior)/7398258267006919331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://Intervals/Intervals.structure/LeftOpenInterval">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="408" />
+                <property name="caretXRelative" value="81" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007863812" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007858450" />
+                </cellIdElement>
+              </collapsedElement>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007852419" />
+                </cellIdElement>
+              </collapsedElement>
+            </foldable>
+            <restoreAlways>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007858450" />
+                </cellIdElement>
+              </collapsedElement>
+            </restoreAlways>
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/4622845597498200657" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007852416" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://Intervals/Intervals.structure/RightOpenInterval">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState" editorFocused="true">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="408" />
+                <property name="caretXRelative" value="81" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007870687" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007869500" />
+                </cellIdElement>
+              </collapsedElement>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007863863" />
+                </cellIdElement>
+              </collapsedElement>
+            </foldable>
+            <restoreAlways>
+              <collapsedElement isCollapsed="false">
+                <cellIdElement cellId="Collection_trik0f_b0">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007869500" />
+                </cellIdElement>
+              </collapsedElement>
+            </restoreAlways>
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007870687" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007858012" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://Intervals/Intervals.structure/Factorization">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.tabs.TabbedEditor$TabbedEditorState">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="158" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="empty_defaultScope">
+                  <node node_reference="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007852098" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007681023" saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+            <enabledHints />
+          </inspectorMemento>
+          <node node_ref="r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)/7398258267007852098" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://Intervals.sandbox/Intervals.sandbox/wild west">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState" editorFocused="true">
+          <memento saveSessionState="false" viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="128" />
+                <property name="caretXRelative" value="9" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_tkoce_e0">
+                  <node node_reference="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007681023" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorMarkers />
+            <transactionalProperties />
+            <foldable />
+            <restoreAlways />
+          </memento>
+          <inspectorMemento currentlyEditedNode="r:e467f90f-67ea-40a8-8760-237e112d60d0(Intervals.sandbox)/7398258267007681023" saveSessionState="false" viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorMarkers />
             <transactionalProperties />
