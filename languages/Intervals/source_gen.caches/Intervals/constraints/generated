@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-7y3l53pw8pfvp63mxhxrzozwqfo3e8r">
-  <files names="ConstraintsAspectDescriptor.java:Interval_Constraints.java" />
+<product version="3" modelHash="-101lwdipalrf6unle2xqjnamy72wn50">
+  <files names="ConstraintsAspectDescriptor.java:IntervalClass_Constraints.java:Interval_Constraints.java" />
 </product>
 
