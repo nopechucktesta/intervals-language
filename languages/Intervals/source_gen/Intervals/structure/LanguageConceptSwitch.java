@@ -14,10 +14,14 @@ public final class LanguageConceptSwitch {
   public static final int Factorization = 2;
   public static final int Interval = 3;
   public static final int IntervalClass = 4;
-  public static final int LeftOpenInterval = 5;
-  public static final int OpenInterval = 6;
-  public static final int RightOpenInterval = 7;
-  public static final int UnboundedInterval = 8;
+  public static final int LeftClosedRightUnboundedInterval = 5;
+  public static final int LeftOpenInterval = 6;
+  public static final int LeftOpenRightUnboundedInterval = 7;
+  public static final int LeftUnboundedRightClosedInterval = 8;
+  public static final int LeftUnboundedRightOpenInterval = 9;
+  public static final int OpenInterval = 10;
+  public static final int RightOpenInterval = 11;
+  public static final int UnboundedInterval = 12;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L);
@@ -26,7 +30,11 @@ public final class LanguageConceptSwitch {
     builder.put(0x4027a593fa5b6202L, Factorization);
     builder.put(0x1c9f87d6ea52916cL, Interval);
     builder.put(0x4027a593fa5b5529L, IntervalClass);
+    builder.put(0x66abe4b239838a17L, LeftClosedRightUnboundedInterval);
     builder.put(0x4027a593fa614a07L, LeftOpenInterval);
+    builder.put(0x66abe4b239838a19L, LeftOpenRightUnboundedInterval);
+    builder.put(0x66abe4b239838a18L, LeftUnboundedRightClosedInterval);
+    builder.put(0x66abe4b239838a1aL, LeftUnboundedRightOpenInterval);
     builder.put(0x4027a593fa6077b4L, OpenInterval);
     builder.put(0x4027a593fa61534aL, RightOpenInterval);
     builder.put(0x1c9f87d6ea52919bL, UnboundedInterval);

@@ -17,6 +17,8 @@
       <concept id="4622845597498168617" name="Intervals.structure.IntervalClass" flags="ng" index="2Uvf2U">
         <child id="4622845597498168620" name="intervals" index="2Uvf2Z" />
       </concept>
+      <concept id="7398258267006405143" name="Intervals.structure.LeftClosedRightUnboundedInterval" flags="ng" index="1va6U_" />
+      <concept id="7398258267006405144" name="Intervals.structure.LeftUnboundedRightClosedInterval" flags="ng" index="1va6UE" />
       <concept id="2062516511483007387" name="Intervals.structure.UnboundedInterval" flags="ng" index="3QNhpd" />
       <concept id="2062516511483007340" name="Intervals.structure.Interval" flags="ng" index="3QNhqU">
         <property id="2062516511483007368" name="rightClosed" index="3QNhpu" />
@@ -34,8 +36,9 @@
     </language>
   </registry>
   <node concept="2Uvcuh" id="40BDpfUmX9h">
+    <property role="TrG5h" value="wild west" />
     <node concept="2Uvf2U" id="40BDpfUmX9i" role="2Uvcug">
-      <property role="TrG5h" value="good" />
+      <property role="TrG5h" value="the good" />
       <node concept="3QNhpd" id="40BDpfUmX9m" role="2Uvf2Z">
         <property role="3QNhqy" value="-2147483648" />
         <property role="3QNhqT" value="true" />
@@ -44,7 +47,7 @@
       </node>
     </node>
     <node concept="2Uvf2U" id="40BDpfUmX9p" role="2Uvcug">
-      <property role="TrG5h" value="bad" />
+      <property role="TrG5h" value="the bad" />
       <node concept="2UhX8B" id="40BDpfUoemn" role="2Uvf2Z">
         <property role="3QNhqy" value="1" />
         <property role="3QNhqI" value="2" />
@@ -82,6 +85,21 @@
         <property role="3QNhqy" value="13" />
         <property role="3QNhqI" value="14" />
       </node>
+      <node concept="1va6U_" id="6qFTb8Tx2xI" role="2Uvf2Z">
+        <property role="3QNhqF" value="true" />
+        <property role="3QNhqI" value="2147483647" />
+        <property role="3QNhqB" value="true" />
+        <property role="3QNhqy" value="14" />
+      </node>
+      <node concept="1va6UE" id="6qFTb8Tx2y4" role="2Uvf2Z">
+        <property role="3QNhqy" value="-2147483648" />
+        <property role="3QNhqT" value="true" />
+        <property role="3QNhpu" value="true" />
+        <property role="3QNhqI" value="0" />
+      </node>
+    </node>
+    <node concept="2Uvf2U" id="6qFTb8Tx$vj" role="2Uvcug">
+      <property role="TrG5h" value="the ugly" />
     </node>
   </node>
 </model>

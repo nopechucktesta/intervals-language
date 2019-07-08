@@ -119,6 +119,9 @@
       <property role="20kJfa" value="classes" />
       <ref role="20lvS9" node="40BDpfUmPkD" resolve="IntervalClass" />
     </node>
+    <node concept="PrWs8" id="6qFTb8Tx2yg" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
   <node concept="1TIwiD" id="40BDpfUo7uO">
     <property role="EcuMT" value="4622845597498505140" />
@@ -142,6 +145,30 @@
     <property role="EcuMT" value="4622845597498561354" />
     <property role="TrG5h" value="RightOpenInterval" />
     <property role="34LRSv" value="right open" />
+    <ref role="1TJDcQ" node="1MvxXrEkD6f" resolve="BoundedInterval" />
+  </node>
+  <node concept="1TIwiD" id="6qFTb8TwSCn">
+    <property role="EcuMT" value="7398258267006405143" />
+    <property role="TrG5h" value="LeftClosedRightUnboundedInterval" />
+    <property role="34LRSv" value="left closed right unbounded" />
+    <ref role="1TJDcQ" node="1MvxXrEkD6f" resolve="BoundedInterval" />
+  </node>
+  <node concept="1TIwiD" id="6qFTb8TwSCo">
+    <property role="EcuMT" value="7398258267006405144" />
+    <property role="TrG5h" value="LeftUnboundedRightClosedInterval" />
+    <property role="34LRSv" value="left unbounded right closed" />
+    <ref role="1TJDcQ" node="1MvxXrEkD6f" resolve="BoundedInterval" />
+  </node>
+  <node concept="1TIwiD" id="6qFTb8TwSCp">
+    <property role="EcuMT" value="7398258267006405145" />
+    <property role="TrG5h" value="LeftOpenRightUnboundedInterval" />
+    <property role="34LRSv" value="left open right unbounded" />
+    <ref role="1TJDcQ" node="1MvxXrEkD6f" resolve="BoundedInterval" />
+  </node>
+  <node concept="1TIwiD" id="6qFTb8TwSCq">
+    <property role="EcuMT" value="7398258267006405146" />
+    <property role="TrG5h" value="LeftUnboundedRightOpenInterval" />
+    <property role="34LRSv" value="left unbounded right open" />
     <ref role="1TJDcQ" node="1MvxXrEkD6f" resolve="BoundedInterval" />
   </node>
 </model>

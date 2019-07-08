@@ -18,6 +18,10 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myClosedInterval__BehaviorDescriptor = new ClosedInterval__BehaviorDescriptor();
   private final BHDescriptor myLeftOpenInterval__BehaviorDescriptor = new LeftOpenInterval__BehaviorDescriptor();
   private final BHDescriptor myRightOpenInterval__BehaviorDescriptor = new RightOpenInterval__BehaviorDescriptor();
+  private final BHDescriptor myLeftClosedRightUnboundedInterval__BehaviorDescriptor = new LeftClosedRightUnboundedInterval__BehaviorDescriptor();
+  private final BHDescriptor myLeftUnboundedRightClosedInterval__BehaviorDescriptor = new LeftUnboundedRightClosedInterval__BehaviorDescriptor();
+  private final BHDescriptor myLeftOpenRightUnboundedInterval__BehaviorDescriptor = new LeftOpenRightUnboundedInterval__BehaviorDescriptor();
+  private final BHDescriptor myLeftUnboundedRightOpenInterval__BehaviorDescriptor = new LeftUnboundedRightOpenInterval__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -31,16 +35,24 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 1:
         return myInterval__BehaviorDescriptor;
       case 2:
-        return myLeftOpenInterval__BehaviorDescriptor;
+        return myLeftClosedRightUnboundedInterval__BehaviorDescriptor;
       case 3:
-        return myOpenInterval__BehaviorDescriptor;
+        return myLeftOpenInterval__BehaviorDescriptor;
       case 4:
-        return myRightOpenInterval__BehaviorDescriptor;
+        return myLeftOpenRightUnboundedInterval__BehaviorDescriptor;
       case 5:
+        return myLeftUnboundedRightClosedInterval__BehaviorDescriptor;
+      case 6:
+        return myLeftUnboundedRightOpenInterval__BehaviorDescriptor;
+      case 7:
+        return myOpenInterval__BehaviorDescriptor;
+      case 8:
+        return myRightOpenInterval__BehaviorDescriptor;
+      case 9:
         return myUnboundedInterval__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa60e8e9L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa614a07L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa6077b4L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa61534aL), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52919bL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa60e8e9L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a17L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa614a07L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a19L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a18L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a1aL), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa6077b4L), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa61534aL), MetaIdFactory.conceptId(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52919bL)).seal();
 }

@@ -14,7 +14,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Factorization;
   private ConceptPresentation props_Interval;
   private ConceptPresentation props_IntervalClass;
+  private ConceptPresentation props_LeftClosedRightUnboundedInterval;
   private ConceptPresentation props_LeftOpenInterval;
+  private ConceptPresentation props_LeftOpenRightUnboundedInterval;
+  private ConceptPresentation props_LeftUnboundedRightClosedInterval;
+  private ConceptPresentation props_LeftUnboundedRightOpenInterval;
   private ConceptPresentation props_OpenInterval;
   private ConceptPresentation props_RightOpenInterval;
   private ConceptPresentation props_UnboundedInterval;
@@ -40,7 +44,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Factorization:
         if (props_Factorization == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("factorization");
+          cpb.presentationByName();
           props_Factorization = cpb.create();
         }
         return props_Factorization;
@@ -57,6 +61,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IntervalClass = cpb.create();
         }
         return props_IntervalClass;
+      case LanguageConceptSwitch.LeftClosedRightUnboundedInterval:
+        if (props_LeftClosedRightUnboundedInterval == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("left closed right unbounded");
+          props_LeftClosedRightUnboundedInterval = cpb.create();
+        }
+        return props_LeftClosedRightUnboundedInterval;
       case LanguageConceptSwitch.LeftOpenInterval:
         if (props_LeftOpenInterval == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -64,6 +75,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_LeftOpenInterval = cpb.create();
         }
         return props_LeftOpenInterval;
+      case LanguageConceptSwitch.LeftOpenRightUnboundedInterval:
+        if (props_LeftOpenRightUnboundedInterval == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("left open right unbounded");
+          props_LeftOpenRightUnboundedInterval = cpb.create();
+        }
+        return props_LeftOpenRightUnboundedInterval;
+      case LanguageConceptSwitch.LeftUnboundedRightClosedInterval:
+        if (props_LeftUnboundedRightClosedInterval == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("left unbounded right closed");
+          props_LeftUnboundedRightClosedInterval = cpb.create();
+        }
+        return props_LeftUnboundedRightClosedInterval;
+      case LanguageConceptSwitch.LeftUnboundedRightOpenInterval:
+        if (props_LeftUnboundedRightOpenInterval == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("left unbounded right open");
+          props_LeftUnboundedRightOpenInterval = cpb.create();
+        }
+        return props_LeftUnboundedRightOpenInterval;
       case LanguageConceptSwitch.OpenInterval:
         if (props_OpenInterval == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -15,8 +15,8 @@ import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 
-public final class ClosedInterval__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa60e8e9L, "Intervals.structure.ClosedInterval");
+public final class LeftClosedRightUnboundedInterval__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a17L, "Intervals.structure.LeftClosedRightUnboundedInterval");
 
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
@@ -25,12 +25,13 @@ public final class ClosedInterval__BehaviorDescriptor extends BaseBHDescriptor {
     SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea52917dL, "leftClosed"), true);
     SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea52916fL, "leftUnbounded"), false);
 
-    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529188L, "rightClosed"), true);
-    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529171L, "rightUnbounded"), false);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529178L, "rightBound"), Integer.MAX_VALUE);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529188L, "rightClosed"), false);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529171L, "rightUnbounded"), true);
   }
 
 
-  /*package*/ ClosedInterval__BehaviorDescriptor() {
+  /*package*/ LeftClosedRightUnboundedInterval__BehaviorDescriptor() {
   }
 
   @Override

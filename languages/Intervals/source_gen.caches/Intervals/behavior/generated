@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-3nje0961pt1tdoigch7w51z4u1evemx">
-  <files names="BehaviorAspectDescriptor.java:ClosedInterval__BehaviorDescriptor.java:Interval__BehaviorDescriptor.java:LeftOpenInterval__BehaviorDescriptor.java:OpenInterval__BehaviorDescriptor.java:RightOpenInterval__BehaviorDescriptor.java:UnboundedInterval__BehaviorDescriptor.java" />
+<product version="3" modelHash="2au3banxrcwtw163bcg9mxp8opgiyt0">
+  <files names="BehaviorAspectDescriptor.java:ClosedInterval__BehaviorDescriptor.java:Interval__BehaviorDescriptor.java:LeftClosedRightUnboundedInterval__BehaviorDescriptor.java:LeftOpenInterval__BehaviorDescriptor.java:LeftOpenRightUnboundedInterval__BehaviorDescriptor.java:LeftUnboundedRightClosedInterval__BehaviorDescriptor.java:LeftUnboundedRightOpenInterval__BehaviorDescriptor.java:OpenInterval__BehaviorDescriptor.java:RightOpenInterval__BehaviorDescriptor.java:UnboundedInterval__BehaviorDescriptor.java" />
 </product>
 

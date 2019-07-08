@@ -29,7 +29,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
   }
 
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(-inf, +inf)");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "(-inf , +inf)");
     editorCell.setCellId("Constant_9w8bu9_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
