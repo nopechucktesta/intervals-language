@@ -14,7 +14,6 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
-  /*package*/ final ConceptDescriptor myConceptBoundedInterval = createDescriptorForBoundedInterval();
   /*package*/ final ConceptDescriptor myConceptClosedInterval = createDescriptorForClosedInterval();
   /*package*/ final ConceptDescriptor myConceptFactorization = createDescriptorForFactorization();
   /*package*/ final ConceptDescriptor myConceptInterval = createDescriptorForInterval();
@@ -41,15 +40,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBoundedInterval, myConceptClosedInterval, myConceptFactorization, myConceptInterval, myConceptIntervalClass, myConceptLeftClosedRightUnboundedInterval, myConceptLeftOpenInterval, myConceptLeftOpenRightUnboundedInterval, myConceptLeftUnboundedRightClosedInterval, myConceptLeftUnboundedRightOpenInterval, myConceptOpenInterval, myConceptRightOpenInterval, myConceptUnboundedInterval);
+    return Arrays.asList(myConceptClosedInterval, myConceptFactorization, myConceptInterval, myConceptIntervalClass, myConceptLeftClosedRightUnboundedInterval, myConceptLeftOpenInterval, myConceptLeftOpenRightUnboundedInterval, myConceptLeftUnboundedRightClosedInterval, myConceptLeftUnboundedRightOpenInterval, myConceptOpenInterval, myConceptRightOpenInterval, myConceptUnboundedInterval);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
-      case LanguageConceptSwitch.BoundedInterval:
-        return myConceptBoundedInterval;
       case LanguageConceptSwitch.ClosedInterval:
         return myConceptClosedInterval;
       case LanguageConceptSwitch.Factorization:
@@ -88,18 +85,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
-  private static ConceptDescriptor createDescriptorForBoundedInterval() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
-    b.class_(false, true, false);
-    b.super_("Intervals.structure.Interval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL);
-    b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/2062516511483007375");
-    b.version(2);
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForClosedInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "ClosedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa60e8e9L);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/4622845597498534121");
     b.version(2);
     b.alias("closed");
@@ -116,16 +105,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForInterval() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "Interval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL);
-    b.class_(false, true, false);
-    b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/2062516511483007340");
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "Interval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
+    b.interface_();
+    b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006912809");
     b.version(2);
-    b.property("leftBound", 0x1c9f87d6ea529174L).type(PrimitiveTypeId.INTEGER).origin("2062516511483007348").done();
-    b.property("leftClosed", 0x1c9f87d6ea52917dL).type(PrimitiveTypeId.BOOLEAN).origin("2062516511483007357").done();
-    b.property("leftUnbounded", 0x1c9f87d6ea52916fL).type(PrimitiveTypeId.BOOLEAN).origin("2062516511483007343").done();
-    b.property("rightBound", 0x1c9f87d6ea529178L).type(PrimitiveTypeId.INTEGER).origin("2062516511483007352").done();
-    b.property("rightClosed", 0x1c9f87d6ea529188L).type(PrimitiveTypeId.BOOLEAN).origin("2062516511483007368").done();
-    b.property("rightUnbounded", 0x1c9f87d6ea529171L).type(PrimitiveTypeId.BOOLEAN).origin("2062516511483007345").done();
+    b.property("leftBound", 0x66abe4b2398b492aL).type(PrimitiveTypeId.INTEGER).origin("7398258267006912810").done();
+    b.property("leftClosed", 0x66abe4b2398b492bL).type(PrimitiveTypeId.BOOLEAN).origin("7398258267006912811").done();
+    b.property("leftUnbounded", 0x66abe4b2398b492cL).type(PrimitiveTypeId.BOOLEAN).origin("7398258267006912812").done();
+    b.property("rightBound", 0x66abe4b2398b492dL).type(PrimitiveTypeId.INTEGER).origin("7398258267006912813").done();
+    b.property("rightClosed", 0x66abe4b2398b492eL).type(PrimitiveTypeId.BOOLEAN).origin("7398258267006912814").done();
+    b.property("rightUnbounded", 0x66abe4b2398b492fL).type(PrimitiveTypeId.BOOLEAN).origin("7398258267006912815").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIntervalClass() {
@@ -134,14 +123,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/4622845597498168617");
     b.version(2);
-    b.aggregate("intervals", 0x4027a593fa5b552cL).target(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL).optional(true).ordered(true).multiple(true).origin("4622845597498168620").done();
+    b.aggregate("intervals", 0x4027a593fa5b552cL).target(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L).optional(true).ordered(true).multiple(true).origin("4622845597498168620").done();
     b.alias("interval class");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForLeftClosedRightUnboundedInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "LeftClosedRightUnboundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a17L);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006405143");
     b.version(2);
     b.alias("left closed right unbounded");
@@ -150,7 +139,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForLeftOpenInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "LeftOpenInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa614a07L);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/4622845597498558983");
     b.version(2);
     b.alias("left open");
@@ -159,7 +148,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForLeftOpenRightUnboundedInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "LeftOpenRightUnboundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a19L);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006405145");
     b.version(2);
     b.alias("left open right unbounded");
@@ -168,7 +157,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForLeftUnboundedRightClosedInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "LeftUnboundedRightClosedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a18L);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006405144");
     b.version(2);
     b.alias("left unbounded right closed");
@@ -177,7 +166,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForLeftUnboundedRightOpenInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "LeftUnboundedRightOpenInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b239838a1aL);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/7398258267006405146");
     b.version(2);
     b.alias("left unbounded right open");
@@ -186,7 +175,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForOpenInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "OpenInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa6077b4L);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/4622845597498505140");
     b.version(2);
     b.alias("open");
@@ -195,7 +184,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForRightOpenInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "RightOpenInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa61534aL);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.BoundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52918fL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/4622845597498561354");
     b.version(2);
     b.alias("right open");
@@ -204,9 +193,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForUnboundedInterval() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("Intervals", "UnboundedInterval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52919bL);
     b.class_(false, false, false);
-    b.super_("Intervals.structure.Interval", 0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL);
+    b.parent(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L);
     b.origin("r:8fb01888-e80c-47d4-b832-dc7fc620bf9c(Intervals.structure)/2062516511483007387");
     b.version(2);
+    b.alias("unbounded");
     return b.create();
   }
 }

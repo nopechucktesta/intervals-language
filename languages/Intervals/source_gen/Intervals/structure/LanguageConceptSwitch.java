@@ -9,26 +9,24 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int BoundedInterval = 0;
-  public static final int ClosedInterval = 1;
-  public static final int Factorization = 2;
-  public static final int Interval = 3;
-  public static final int IntervalClass = 4;
-  public static final int LeftClosedRightUnboundedInterval = 5;
-  public static final int LeftOpenInterval = 6;
-  public static final int LeftOpenRightUnboundedInterval = 7;
-  public static final int LeftUnboundedRightClosedInterval = 8;
-  public static final int LeftUnboundedRightOpenInterval = 9;
-  public static final int OpenInterval = 10;
-  public static final int RightOpenInterval = 11;
-  public static final int UnboundedInterval = 12;
+  public static final int ClosedInterval = 0;
+  public static final int Factorization = 1;
+  public static final int Interval = 2;
+  public static final int IntervalClass = 3;
+  public static final int LeftClosedRightUnboundedInterval = 4;
+  public static final int LeftOpenInterval = 5;
+  public static final int LeftOpenRightUnboundedInterval = 6;
+  public static final int LeftUnboundedRightClosedInterval = 7;
+  public static final int LeftUnboundedRightOpenInterval = 8;
+  public static final int OpenInterval = 9;
+  public static final int RightOpenInterval = 10;
+  public static final int UnboundedInterval = 11;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L);
-    builder.put(0x1c9f87d6ea52918fL, BoundedInterval);
     builder.put(0x4027a593fa60e8e9L, ClosedInterval);
     builder.put(0x4027a593fa5b6202L, Factorization);
-    builder.put(0x1c9f87d6ea52916cL, Interval);
+    builder.put(0x66abe4b2398b4929L, Interval);
     builder.put(0x4027a593fa5b5529L, IntervalClass);
     builder.put(0x66abe4b239838a17L, LeftClosedRightUnboundedInterval);
     builder.put(0x4027a593fa614a07L, LeftOpenInterval);

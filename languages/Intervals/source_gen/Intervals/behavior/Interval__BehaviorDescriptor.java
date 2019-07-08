@@ -20,17 +20,17 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 
 public final class Interval__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, "Intervals.structure.Interval");
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getInterfaceConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, "Intervals.structure.Interval");
 
-  public static final SMethod<Boolean> intersects_id1MvxXrEkQ3o = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("intersects").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1MvxXrEkQ3o").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> intersects_id6qFTb8TyQgi = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("intersects").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6qFTb8TyQgi").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(intersects_id1MvxXrEkQ3o);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(intersects_id6qFTb8TyQgi);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static boolean intersects_id1MvxXrEkQ3o(@NotNull SNode __thisNode__, SNode that) {
-    return ((SPropertyOperations.getBoolean(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea52917dL, "leftClosed")) && SPropertyOperations.getBoolean(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529188L, "rightClosed")) ? SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529174L, "leftBound")) <= SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529178L, "rightBound")) : SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529174L, "leftBound")) < SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529178L, "rightBound")))) && ((SPropertyOperations.getBoolean(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529188L, "rightClosed")) && SPropertyOperations.getBoolean(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529188L, "rightClosed")) ? SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529174L, "leftBound")) <= SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529178L, "rightBound")) : SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529174L, "leftBound")) < SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529178L, "rightBound"))));
+  /*package*/ static boolean intersects_id6qFTb8TyQgi(@NotNull SNode __thisNode__, SNode that) {
+    return ((SPropertyOperations.getBoolean(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492bL, "leftClosed")) && SPropertyOperations.getBoolean(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492eL, "rightClosed")) ? SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492aL, "leftBound")) <= SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound")) : SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492aL, "leftBound")) < SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound")))) && ((SPropertyOperations.getBoolean(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492eL, "rightClosed")) && SPropertyOperations.getBoolean(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492eL, "rightClosed")) ? SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492aL, "leftBound")) <= SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound")) : SPropertyOperations.getInteger(that, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492aL, "leftBound")) < SPropertyOperations.getInteger(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound"))));
   }
 
   /*package*/ Interval__BehaviorDescriptor() {
@@ -49,7 +49,7 @@ public final class Interval__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((Boolean) intersects_id1MvxXrEkQ3o(node, (SNode) parameters[0]));
+        return (T) ((Boolean) intersects_id6qFTb8TyQgi(node, (SNode) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

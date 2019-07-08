@@ -136,7 +136,7 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
       return MetaAdapterFactory.getContainmentLink(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa5b5529L, 0x4027a593fa5b552cL, "intervals");
     }
     public SAbstractConcept getChildSConcept() {
-      return MetaAdapterFactory.getConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, "Intervals.structure.Interval");
+      return MetaAdapterFactory.getInterfaceConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, "Intervals.structure.Interval");
     }
 
     public EditorCell createNodeCell(SNode elementNode) {

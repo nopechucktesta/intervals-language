@@ -11,6 +11,8 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1153417849900" name="jetbrains.mps.baseLanguage.structure.GreaterThanOrEqualsExpression" flags="nn" index="2d3UOw" />
+      <concept id="1153422305557" name="jetbrains.mps.baseLanguage.structure.LessThanOrEqualsExpression" flags="nn" index="2dkUwp" />
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
@@ -46,6 +48,10 @@
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
       <concept id="1144226303539" name="jetbrains.mps.baseLanguage.structure.ForeachStatement" flags="nn" index="1DcWWT">
         <child id="1144226360166" name="iterable" index="1DdaDG" />
       </concept>
@@ -58,11 +64,19 @@
     </language>
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
       <concept id="6702802731807351367" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAChild" flags="in" index="9S07l" />
+      <concept id="1202989658459" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_parentNode" flags="nn" index="nLn13" />
+      <concept id="1147467115080" name="jetbrains.mps.lang.constraints.structure.NodePropertyConstraint" flags="ng" index="EnEH3">
+        <reference id="1147467295099" name="applicableProperty" index="EomxK" />
+        <child id="1212097481299" name="propertyValidator" index="QCWH9" />
+      </concept>
       <concept id="1147468365020" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_node" flags="nn" index="EsrRn" />
+      <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
         <child id="6702802731807737306" name="canBeChild" index="9Vyp8" />
+        <child id="1213098023997" name="property" index="1MhHOB" />
       </concept>
+      <concept id="1153138554286" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_propertyValue" flags="nn" index="1Wqviy" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
@@ -76,6 +90,9 @@
       <concept id="1883223317721107059" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVarReference" flags="nn" index="Jnkvi" />
       <concept id="1145573345940" name="jetbrains.mps.lang.smodel.structure.Node_GetAllSiblingsOperation" flags="nn" index="2TvwIu" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2" />
+      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
+        <reference id="1138056395725" name="property" index="3TsBF5" />
+      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -83,52 +100,98 @@
       </concept>
     </language>
   </registry>
-  <node concept="1M2fIO" id="40BDpfUmXdJ">
-    <ref role="1M2myG" to="ildr:1MvxXrEkD5G" resolve="Interval" />
-    <node concept="9S07l" id="40BDpfUmXdK" role="9Vyp8">
-      <node concept="3clFbS" id="40BDpfUmXdL" role="2VODD2">
-        <node concept="1DcWWT" id="40BDpfUnB70" role="3cqZAp">
-          <node concept="3clFbS" id="40BDpfUnB73" role="2LFqv$">
-            <node concept="Jncv_" id="40BDpfUnN9W" role="3cqZAp">
-              <ref role="JncvD" to="ildr:1MvxXrEkD5G" resolve="Interval" />
-              <node concept="37vLTw" id="40BDpfUnOae" role="JncvB">
-                <ref role="3cqZAo" node="40BDpfUnB74" resolve="sibling" />
+  <node concept="1M2fIO" id="6qFTb8TyOAr">
+    <ref role="1M2myG" to="ildr:6qFTb8TyO$D" resolve="Interval" />
+    <node concept="EnEH3" id="6qFTb8TyOAs" role="1MhHOB">
+      <ref role="EomxK" to="ildr:6qFTb8TyO$E" resolve="leftBound" />
+      <node concept="QB0g5" id="6qFTb8TyOAu" role="QCWH9">
+        <node concept="3clFbS" id="6qFTb8TyOAv" role="2VODD2">
+          <node concept="3cpWs6" id="6qFTb8TyOEl" role="3cqZAp">
+            <node concept="2dkUwp" id="6qFTb8TyPvf" role="3cqZAk">
+              <node concept="2OqwBi" id="6qFTb8TyPVw" role="3uHU7w">
+                <node concept="EsrRn" id="6qFTb8TyPvO" role="2Oq$k0" />
+                <node concept="3TrcHB" id="6qFTb8TyQ2a" role="2OqNvi">
+                  <ref role="3TsBF5" to="ildr:6qFTb8TyO$H" resolve="rightBound" />
+                </node>
               </node>
-              <node concept="3clFbS" id="40BDpfUnN9Y" role="Jncv$">
-                <node concept="3clFbJ" id="40BDpfUnTaB" role="3cqZAp">
-                  <node concept="2OqwBi" id="40BDpfUnVar" role="3clFbw">
-                    <node concept="EsrRn" id="40BDpfUnUaK" role="2Oq$k0" />
-                    <node concept="2qgKlT" id="40BDpfUnWwK" role="2OqNvi">
-                      <ref role="37wK5l" to="wzsw:1MvxXrEkQ3o" resolve="intersects" />
-                      <node concept="Jnkvi" id="40BDpfUnX$g" role="37wK5m">
-                        <ref role="1M0zk5" node="40BDpfUnN9Z" resolve="that" />
+              <node concept="1Wqviy" id="6qFTb8TyOFb" role="3uHU7B" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="EnEH3" id="6qFTb8Tzjmj" role="1MhHOB">
+      <ref role="EomxK" to="ildr:6qFTb8TyO$H" resolve="rightBound" />
+      <node concept="QB0g5" id="6qFTb8Tzjnc" role="QCWH9">
+        <node concept="3clFbS" id="6qFTb8Tzjnd" role="2VODD2">
+          <node concept="3cpWs6" id="6qFTb8Tzjoj" role="3cqZAp">
+            <node concept="2d3UOw" id="6qFTb8TzkcV" role="3cqZAk">
+              <node concept="2OqwBi" id="6qFTb8TzkwQ" role="3uHU7w">
+                <node concept="EsrRn" id="6qFTb8Tzkdw" role="2Oq$k0" />
+                <node concept="3TrcHB" id="6qFTb8TzkBN" role="2OqNvi">
+                  <ref role="3TsBF5" to="ildr:6qFTb8TyO$E" resolve="leftBound" />
+                </node>
+              </node>
+              <node concept="1Wqviy" id="6qFTb8TzjoR" role="3uHU7B" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9S07l" id="6qFTb8TzC8j" role="9Vyp8">
+      <node concept="3clFbS" id="6qFTb8TzC8k" role="2VODD2">
+        <node concept="Jncv_" id="6qFTb8TzCfd" role="3cqZAp">
+          <ref role="JncvD" to="ildr:40BDpfUmPkD" resolve="IntervalClass" />
+          <node concept="nLn13" id="6qFTb8TzCjl" role="JncvB" />
+          <node concept="3clFbS" id="6qFTb8TzCff" role="Jncv$">
+            <node concept="1DcWWT" id="6qFTb8TzWul" role="3cqZAp">
+              <node concept="3clFbS" id="6qFTb8TzWun" role="2LFqv$">
+                <node concept="Jncv_" id="6qFTb8T$6ke" role="3cqZAp">
+                  <ref role="JncvD" to="ildr:6qFTb8TyO$D" resolve="Interval" />
+                  <node concept="37vLTw" id="6qFTb8T$7cY" role="JncvB">
+                    <ref role="3cqZAo" node="6qFTb8TzWuo" resolve="sibling" />
+                  </node>
+                  <node concept="3clFbS" id="6qFTb8T$6ki" role="Jncv$">
+                    <node concept="3clFbJ" id="6qFTb8T$dtZ" role="3cqZAp">
+                      <node concept="2OqwBi" id="6qFTb8T$fiJ" role="3clFbw">
+                        <node concept="Jnkvi" id="6qFTb8T$emy" role="2Oq$k0">
+                          <ref role="1M0zk5" node="6qFTb8T$6kk" resolve="sameClassInterval" />
+                        </node>
+                        <node concept="2qgKlT" id="6qFTb8T$geQ" role="2OqNvi">
+                          <ref role="37wK5l" to="wzsw:6qFTb8TyQgi" resolve="intersects" />
+                          <node concept="EsrRn" id="6qFTb8T$h7t" role="37wK5m" />
+                        </node>
+                      </node>
+                      <node concept="3clFbS" id="6qFTb8T$du1" role="3clFbx">
+                        <node concept="3cpWs6" id="6qFTb8T$i08" role="3cqZAp">
+                          <node concept="3clFbT" id="6qFTb8T$iQ0" role="3cqZAk" />
+                        </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="3clFbS" id="40BDpfUnTaD" role="3clFbx">
-                    <node concept="3cpWs6" id="40BDpfUnYBN" role="3cqZAp">
-                      <node concept="3clFbT" id="40BDpfUo0Jq" role="3cqZAk" />
-                    </node>
+                  <node concept="JncvC" id="6qFTb8T$6kk" role="JncvA">
+                    <property role="TrG5h" value="sameClassInterval" />
+                    <node concept="2jxLKc" id="6qFTb8T$6kl" role="1tU5fm" />
                   </node>
                 </node>
               </node>
-              <node concept="JncvC" id="40BDpfUnN9Z" role="JncvA">
-                <property role="TrG5h" value="that" />
-                <node concept="2jxLKc" id="40BDpfUnNa0" role="1tU5fm" />
+              <node concept="3cpWsn" id="6qFTb8TzWuo" role="1Duv9x">
+                <property role="TrG5h" value="sibling" />
+                <node concept="3Tqbb2" id="6qFTb8TzWEd" role="1tU5fm" />
+              </node>
+              <node concept="2OqwBi" id="6qFTb8TzX6y" role="1DdaDG">
+                <node concept="EsrRn" id="6qFTb8TzWP6" role="2Oq$k0" />
+                <node concept="2TvwIu" id="6qFTb8TzXu5" role="2OqNvi" />
               </node>
             </node>
           </node>
-          <node concept="3cpWsn" id="40BDpfUnB74" role="1Duv9x">
-            <property role="TrG5h" value="sibling" />
-            <node concept="3Tqbb2" id="40BDpfUnBn5" role="1tU5fm" />
-          </node>
-          <node concept="2OqwBi" id="40BDpfUnCp3" role="1DdaDG">
-            <node concept="EsrRn" id="40BDpfUnC53" role="2Oq$k0" />
-            <node concept="2TvwIu" id="40BDpfUnCXf" role="2OqNvi" />
+          <node concept="JncvC" id="6qFTb8TzCfg" role="JncvA">
+            <property role="TrG5h" value="intervalClass" />
+            <node concept="2jxLKc" id="6qFTb8TzCfh" role="1tU5fm" />
           </node>
         </node>
-        <node concept="3cpWs6" id="40BDpfUnF2C" role="3cqZAp">
-          <node concept="3clFbT" id="40BDpfUnG4x" role="3cqZAk">
+        <node concept="3cpWs6" id="6qFTb8TzCm$" role="3cqZAp">
+          <node concept="3clFbT" id="6qFTb8TzCnX" role="3cqZAk">
             <property role="3clFbU" value="true" />
           </node>
         </node>

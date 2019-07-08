@@ -9,7 +9,6 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_BoundedInterval;
   private ConceptPresentation props_ClosedInterval;
   private ConceptPresentation props_Factorization;
   private ConceptPresentation props_Interval;
@@ -28,12 +27,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.BoundedInterval:
-        if (props_BoundedInterval == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_BoundedInterval = cpb.create();
-        }
-        return props_BoundedInterval;
       case LanguageConceptSwitch.ClosedInterval:
         if (props_ClosedInterval == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -113,7 +106,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.UnboundedInterval:
         if (props_UnboundedInterval == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("UnboundedInterval");
+          cpb.rawPresentation("unbounded");
           props_UnboundedInterval = cpb.create();
         }
         return props_UnboundedInterval;

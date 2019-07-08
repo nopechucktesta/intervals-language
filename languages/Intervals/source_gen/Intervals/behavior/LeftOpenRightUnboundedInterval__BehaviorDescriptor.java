@@ -22,12 +22,12 @@ public final class LeftOpenRightUnboundedInterval__BehaviorDescriptor extends Ba
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
 
   private static void ___init___(@NotNull SNode __thisNode__) {
-    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea52917dL, "leftClosed"), false);
-    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea52916fL, "leftUnbounded"), false);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492bL, "leftClosed"), false);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492cL, "leftUnbounded"), false);
 
-    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529178L, "rightBound"), Integer.MAX_VALUE);
-    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529188L, "rightClosed"), false);
-    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, 0x1c9f87d6ea529171L, "rightUnbounded"), true);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound"), Integer.MAX_VALUE);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492eL, "rightClosed"), false);
+    SPropertyOperations.assign(__thisNode__, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492fL, "rightUnbounded"), true);
   }
 
 

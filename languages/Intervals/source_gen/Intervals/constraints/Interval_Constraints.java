@@ -9,16 +9,23 @@ import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeChild;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.CheckingNodeContext;
+import jetbrains.mps.smodel.runtime.base.BasePropertyConstraintsDescriptor;
+import jetbrains.mps.smodel.runtime.ConstraintsDescriptor;
+import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import java.util.Map;
+import org.jetbrains.mps.openapi.language.SProperty;
+import jetbrains.mps.smodel.runtime.PropertyConstraintsDescriptor;
+import java.util.HashMap;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import Intervals.behavior.Interval__BehaviorDescriptor;
-import jetbrains.mps.smodel.SNodePointer;
 
 public class Interval_Constraints extends BaseConstraintsDescriptor {
   public Interval_Constraints() {
-    super(MetaAdapterFactory.getConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, "Intervals.structure.Interval"));
+    super(MetaAdapterFactory.getInterfaceConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, "Intervals.structure.Interval"));
   }
 
   @Override
@@ -36,18 +43,72 @@ public class Interval_Constraints extends BaseConstraintsDescriptor {
       }
     };
   }
+  public static class LeftBound_Property extends BasePropertyConstraintsDescriptor {
+    public LeftBound_Property(ConstraintsDescriptor container) {
+      super(MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492aL, "leftBound"), container);
+    }
+    @Override
+    public boolean hasOwnValidator() {
+      return true;
+    }
+    private static final SNodePointer validatePropertyBreakingPoint = new SNodePointer("r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)", "7398258267006912926");
+    @Override
+    public boolean validateValue(SNode node, String propertyValue, CheckingNodeContext checkingNodeContext) {
+      boolean result = staticValidateProperty(node, propertyValue);
+      if (!(result) && checkingNodeContext != null) {
+        checkingNodeContext.setBreakingNode(validatePropertyBreakingPoint);
+      }
+      return result;
+    }
+    private static boolean staticValidateProperty(SNode node, String propertyValue) {
+      return (SPropertyOperations.getInteger(propertyValue)) <= SPropertyOperations.getInteger(node, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound"));
+    }
+  }
+  public static class RightBound_Property extends BasePropertyConstraintsDescriptor {
+    public RightBound_Property(ConstraintsDescriptor container) {
+      super(MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound"), container);
+    }
+    @Override
+    public boolean hasOwnValidator() {
+      return true;
+    }
+    private static final SNodePointer validatePropertyBreakingPoint = new SNodePointer("r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)", "7398258267007038924");
+    @Override
+    public boolean validateValue(SNode node, String propertyValue, CheckingNodeContext checkingNodeContext) {
+      boolean result = staticValidateProperty(node, propertyValue);
+      if (!(result) && checkingNodeContext != null) {
+        checkingNodeContext.setBreakingNode(validatePropertyBreakingPoint);
+      }
+      return result;
+    }
+    private static boolean staticValidateProperty(SNode node, String propertyValue) {
+      return (SPropertyOperations.getInteger(propertyValue)) >= SPropertyOperations.getInteger(node, MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492aL, "leftBound"));
+    }
+  }
+  @Override
+  protected Map<SProperty, PropertyConstraintsDescriptor> getSpecifiedProperties() {
+    Map<SProperty, PropertyConstraintsDescriptor> properties = new HashMap<SProperty, PropertyConstraintsDescriptor>();
+    properties.put(MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492aL, "leftBound"), new Interval_Constraints.LeftBound_Property(this));
+    properties.put(MetaAdapterFactory.getProperty(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, 0x66abe4b2398b492dL, "rightBound"), new Interval_Constraints.RightBound_Property(this));
+    return properties;
+  }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    for (SNode sibling : SNodeOperations.getAllSiblings(node, false)) {
-      {
-        final SNode that = sibling;
-        if (SNodeOperations.isInstanceOf(that, MetaAdapterFactory.getConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x1c9f87d6ea52916cL, "Intervals.structure.Interval"))) {
-          if ((boolean) Interval__BehaviorDescriptor.intersects_id1MvxXrEkQ3o.invoke(node, that)) {
-            return false;
+    {
+      final SNode intervalClass = parentNode;
+      if (SNodeOperations.isInstanceOf(intervalClass, MetaAdapterFactory.getConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x4027a593fa5b5529L, "Intervals.structure.IntervalClass"))) {
+        for (SNode sibling : SNodeOperations.getAllSiblings(node, false)) {
+          {
+            final SNode sameClassInterval = sibling;
+            if (SNodeOperations.isInstanceOf(sameClassInterval, MetaAdapterFactory.getInterfaceConcept(0xa53c4e1e842a41bfL, 0x8061e6593f83a038L, 0x66abe4b2398b4929L, "Intervals.structure.Interval"))) {
+              if ((boolean) Interval__BehaviorDescriptor.intersects_id6qFTb8TyQgi.invoke(sameClassInterval, node)) {
+                return false;
+              }
+            }
           }
         }
       }
     }
     return true;
   }
-  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)", "4622845597498200944");
+  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:3f1eab0c-6584-4ad4-b983-8ebea5535807(Intervals.constraints)", "7398258267007123987");
 }
